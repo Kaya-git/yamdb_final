@@ -29,6 +29,6 @@ jobs:
         
         python -m flake8
         
-        cd yamdb_final/api_yamdb/manage.py
+        cd api_yamdb/manage.py
         
         pytest
