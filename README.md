@@ -1,6 +1,6 @@
 # YaMDb REST API
 
-[yamdb_workflow](https://github.com/SurfimChilim/yamdb_final/actions/workflows/yamdb_workflow.yml)
+![yamdb_tests](https://github.com/SurfimChilim/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ## Описание
 
