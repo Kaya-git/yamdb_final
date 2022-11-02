@@ -1,5 +1,7 @@
 # YaMDb REST API
 
+[yamdb_workflow](https://github.com/SurfimChilim/yamdb_final/actions/workflows/yamdb_workflow.yml)
+
 ## Описание
 
 Проект реализует REST API для сервиса YaMDb — базы отзывов о различных произведениях (фильмах, книгах, музыке и др.). API предоставляет следующие возможности:
