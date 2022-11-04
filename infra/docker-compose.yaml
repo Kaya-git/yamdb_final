@@ -20,7 +20,8 @@ services:
       - ./.env
 
   nginx:
-    image: nginx:1.21.3-alpine
+    build:
+      context: kaya94/nginx:v2.30.10.22
     ports:
       - "80:80"
     volumes:
