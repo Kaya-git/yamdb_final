@@ -9,8 +9,7 @@ services:
       - ./.env
 
   web:
-    build:
-      context: kaya94/web:v2.30.10.22
+    image: kaya94/web:v2.30.10.22
     restart: always
     volumes:
       - static_value:/app/static/
@@ -20,8 +19,7 @@ services:
       - ./.env
 
   nginx:
-    build:
-      context: kaya94/nginx:v2.30.10.22
+    image: nginx:1.21.3-alpine
     ports:
       - "80:80"
     volumes:
