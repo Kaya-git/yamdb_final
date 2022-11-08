@@ -2,6 +2,7 @@
 
 ![yamdb_tests](https://github.com/SurfimChilim/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+С проектом можете ознакомится по ссылке : hhtps://51.250.110.115:8000
 ## Описание
 
 Проект реализует REST API для сервиса YaMDb — базы отзывов о различных произведениях (фильмах, книгах, музыке и др.). API предоставляет следующие возможности:
@@ -219,4 +220,4 @@ docker-compose exec web python manage.py collectstatic --no-input
 - Gunicorn 20.0.4
 - PostgreSql v15
 ## Об авторе:
-- Начинающий разработчик Евгений. Возьмите на работу
+- Начинающий разработчик Евгений Бузуев. С моими другими работами вы можете ознакомится по ссылке: https://github.com/SurfimChilim
