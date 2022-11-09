@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: kaya94/web:v2.30.10.22
+    image: kaya94/web:latest
     restart: always
     volumes:
       - static_value:/app/static/
