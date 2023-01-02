@@ -29,7 +29,7 @@
 Клонировать репозиторий и перейти в директорию проекта:
 
 ```
-git clone git@github.com:hikjik/api_yamdb.git
+git clone git@github.com:SurfimChilim/api_yamdb.git
 ```
 
 ```
@@ -187,22 +187,30 @@ DB_HOST=db
 DB_PORT=5432
 ```
 ## Описание команд для запуска приложения в контейнерах
-- Запускаем контейнер в терминале командой:
+- Клонировать репозиторий GitHub (не забываем создать виртуальное окружение и установить зависимости):
+[git@github.com:SurfimChilim/yamdb_final.git](https://github.com/SurfimChilim/yamdb_final.git)
+
+- Создать файл .env в папке проекта:
 ```
-docker run --name <имя контейнера> -it -p 8000:8000 yamdb
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+DB_HOST=db
+DB_PORT=5432
+ALLOWED_HOSTS='*'
 ```
-- Останавливаем контейнер командой:
+- Собираем контейнеры:
 ```
-docker container start <CONTAINER ID>
+docker-compose up -d --build
 ```
-## Описание команд для заполнения бд:
+- Сделать миграции, создать суперпользователя и собрать статику:
 ```
-docker-compose exec web python manage.py migrate
-```
-docker-compose exec web python manage.py createsuperuser
-```
-docker-compose exec web python manage.py collectstatic --no-input
-```
+docker-compose exec backend python manage.py migrate
+docker-compose exec backend python manage.py createsuperuser
+docker-compose exec backend python manage.py collectstatic --no-input 
+docker-compose exec backend python manage.py load_ingredients <Название файла из директории data>
+
 ## Использованные технологии:
 - Python 3.7
 - Django Framework 2.2.16
