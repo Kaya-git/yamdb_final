@@ -210,7 +210,7 @@ docker-compose exec backend python manage.py migrate
 docker-compose exec backend python manage.py createsuperuser
 docker-compose exec backend python manage.py collectstatic --no-input 
 docker-compose exec backend python manage.py load_ingredients <Название файла из директории data>
-
+```
 ## Использованные технологии:
 - Python 3.7
 - Django Framework 2.2.16
